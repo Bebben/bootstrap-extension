@@ -10,7 +10,8 @@
     "matches": [
       "<all_urls>"
     ],
-    "js": ["script.js"]
+    "css": ["style.css"],
+    "js": ["jquery.js","script.js"]
   }
 ]
 }

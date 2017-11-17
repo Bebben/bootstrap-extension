@@ -1,0 +1,13 @@
+#popup-bstrp {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: 5px solid #563F7A;
+	color: #563F7A;
+	font-weight: bolder;
+	border-radius: 5px;
+	padding: 5px 10px;
+	background: #fff;
+	position: fixed;
+	font-size: 18px;
+}
