@@ -5,9 +5,7 @@ const formatBootstrap = ['XS', 'SM', 'MD', 'LG'];
 const _ = el => console.log(el);
 
 const modifyBootstrap = (n) => {
-	if (n == -1) {
-		return;
-	}
+	if (n == -1) {return;}
 	for (let i = 0; i < 4; i++) {
 		if (i != n) {
 			bootstrapSize[i] = 0;
