@@ -12,8 +12,12 @@ const modifyBootstrap = (n) => {
 		}
 	}
 	bootstrapSize[n] = 1;
-	_(`Boostrap Breakpoint : ${formatBootstrap[n]}`);
+	// _(`Boostrap Breakpoint : ${formatBootstrap[n]}`);
+	$('#popup-bstrp').fadeIn(0);
 	$('#popup-bstrp').html(`${formatBootstrap[n]}`);
+	setTimeout(() => {
+		$('#popup-bstrp').fadeOut();
+	}, 3000);
 }
 
 const refreshBoostrapSize = () => {
