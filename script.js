@@ -12,7 +12,7 @@ const modifyBootstrap = (n) => {
 		}
 	}
 	bootstrapSize[n] = 1;
-	//Change to this to a real mini popup in the corner
+	//Change this to a real mini popup in the corner
 	_(`Boostrap Breakpoint : ${formatBootstrap[n]}`);
 }
 
