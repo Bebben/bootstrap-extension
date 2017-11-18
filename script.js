@@ -5,18 +5,19 @@ const formatBootstrap = ['XS', 'SM', 'MD', 'LG'];
 const _ = el => console.log(el);
 
 const modifyBootstrap = (n) => {
-	if (n == -1) {return;}
 	for (let i = 0; i < 4; i++) {
 		if (i != n) {
 			bootstrapSize[i] = 0;
 		}
 	}
 	bootstrapSize[n] = 1;
-	// _(`Boostrap Breakpoint : ${formatBootstrap[n]}`);
+	$('#popup-bstrp').css('z-index', '50000');
 	$('#popup-bstrp').fadeIn(0);
-	$('#popup-bstrp').html(`${formatBootstrap[n]}`);
+	$('#popup-bstrp').html(formatBootstrap[n]);
 	setTimeout(() => {
-		$('#popup-bstrp').fadeOut();
+		$('#popup-bstrp').fadeOut('slow', () => {
+			$('#popup-bstrp').css('z-index', '-1');
+		});
 	}, 3000);
 }
 
@@ -28,7 +29,8 @@ const refreshBoostrapSize = () => {
 		-1)
 }
 
-$('body').append(`<div id="popup-bstrp"></div>`);
+$('body').append('<div id="popup-bstrp"></div>');
+$('#popup-bstrp').css('z-index', '50000');
 refreshBoostrapSize();
 
 window.onresize = (event) => {
